@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Almarai', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-container {
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar content";
+}
+
+.sidebar {
+    background-color: rgb(89, 245, 123);
+    grid-area: sidebar;
+    padding: 20px;
+    gap: 20px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.logo {
+    width: 90%;
+    height: 25px;
+    border: 2px solid gray;
+    margin-bottom: 50px;
+}
+
+.header {
+    background-color: orange;
+    grid-area: header;
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    padding: 10px;
+    gap: 5px;
+}
+
+.header-top-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.header-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.user {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.content {
+    background-color: rgb(90, 90, 247);
+    grid-area: content;
+    display: grid;
+    grid-template: 50% 50% / 3fr 1fr;
+    grid-template-areas: 
+        "projects announcements"
+        "projects trending"
+        ;
+}
+
+.projects {
+    grid-area: projects;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    
+}
+
+.project-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, max-content));
+    gap: 15px;
+    overflow: visible;
+}
+
+.project-card {
+    background-color: violet;
+    border: 2px solid black;
+}
+
+.announcements {
+    grid-area: announcments;
+}
+
+.trending {
+    grid-area: trending;
+}
