@@ -8,6 +8,18 @@ ul {
     list-style-type: none;
 }
 
+.title {
+    font-size: 1em;
+    font-weight: bold;
+    align-self: center;
+    
+}
+
+.heading {
+    font-weight: bold;
+    font-size: .8em;
+}
+
 .main-container {
     display: grid;
     grid-template-rows: 1fr 10fr;
@@ -28,7 +40,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 25px;
+    font-size: 1.25em;
 }
 
 .logo {
@@ -74,22 +86,22 @@ ul {
         "projects announcements"
         "projects trending"
         ;
+    padding: 15px;
 }
 
 .projects {
     grid-area: projects;
     padding: 15px;
     display: grid;
-    grid-template-rows: 30px 1fr;
+    grid-template-rows: 2em 1fr;
     
 }
 
 .project-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(150px, max-content));
     gap: 15px;
-    overflow: visible;
 }
 
 .project-card {
@@ -98,9 +110,26 @@ ul {
 }
 
 .announcements {
-    grid-area: announcments;
+    grid-area: announcements;
+    display: grid;
+    grid-template-rows: 2em 1fr;
+    padding: 15px 15px 15px 0;
+
+}
+
+.announce-body {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.announce>p {
+    font-size: .6em;
 }
 
 .trending {
     grid-area: trending;
+    display
 }
