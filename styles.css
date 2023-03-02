@@ -9,6 +9,7 @@
     --card-shadow: 2px 2px 9px 1px rgb(145, 145, 145);
     --accent-color1: rgb(88, 144, 218);
     --accent-color2: rgba(224, 224, 224, 0.884);
+    --text-body-color: rgb(107, 107, 107);
 }
 
 ul {
@@ -35,6 +36,7 @@ button {
     display: flex;
     align-items: center;
     color: whitesmoke;
+    padding: .25em;
 }
 
 .title {
@@ -50,16 +52,16 @@ button {
 }
 
 .icon {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.5em;
+    width: 1.5em;
     align-self: center;
 }
 
 
 .main-container {
     display: grid;
-    grid-template-rows: 7rem 100%;
-    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 7.5rem 100%;
+    grid-template-columns: 1.25fr 5fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
@@ -97,8 +99,6 @@ button {
     padding-left: 1em;
 }
 
-
-
 .header {
     background-color: var(--card-color);
     grid-area: header;
@@ -121,12 +121,17 @@ button {
     align-items: center;
 }
 
+.search label {
+    padding-right: .5em;
+}
 
 #searchbar {
+    appearance: none;
     border-radius: 12px;
     border: none;
     background-color: var(--accent-color2);
-    margin-left: 1.5em;
+    padding-left: 1em;
+    margin-right: 2em;
     width: 25em;
     height: 1.5em;
 }
@@ -139,6 +144,26 @@ button {
 
 .actions {
     align-self: center;
+}
+
+.greeting-container {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting-container .user-icon {
+    height: 3em;
+    width: 3em;
+}
+
+.greeting-text {
+    padding-left: 1em;
+}
+
+.greeting-text p:first-child {
+    font-size: .75em;
 }
 
 .user {
@@ -175,7 +200,7 @@ button {
 
 .project-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     gap: 1rem;
 }
 
@@ -184,14 +209,28 @@ button {
     border-left: 1em solid rgba(134, 190, 241, 0.39);
     border-radius: 9px;
     box-shadow: var(--card-shadow);
-    min-height: 100px;
+    min-height: 75px;
+    max-height: 11em;
     padding: 1em;
     display: grid;
     grid-template-rows: 3fr 1fr;
 }
 
+.project-text p {
+    color: var(--text-body-color);
+    font-size: .9em;
+}
+
+h4 {
+    padding-bottom: .25em;
+}
+
 .project-icons {
     justify-self: right;
+}
+
+.project-icons a {
+    padding: .25em;
 }
 
 .announcements {
@@ -213,13 +252,34 @@ button {
     box-shadow: var(--card-shadow);
     border-radius: 9px;
     padding: 1em;
+}
 
+.announce h4 {
+    font-size: .75em;
 }
 
 .announce>p {
     font-size: .6em;
+    color: var(--text-body-color);
 }
 
 .trending {
     grid-area: trending;
+}
+
+.trending-item {
+    display: flex;
+}
+
+.trending-item .user-icon {
+    padding-right: .5em;
+}
+
+.screen-name {
+    font-size: .75em;
+    font-weight: bold;
+}
+
+.descriptor {
+    color: var(--text-body-color);
 }
